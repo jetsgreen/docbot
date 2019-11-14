@@ -12,7 +12,11 @@ I started this project by creating and cloning a repository. Then I installed a 
 
 3 Give start-to-finish instructions on how to run the app
 
-The user can start the app by choosing one of the three main options, which are: concert-this, movie-this, spotify-this song.  Concet-this will display the name of the venue, the venue location and time and date of the event.  Movie-this will display the Title of the movie, year the movie came out, the IMDB Rating of the movie, the  country where the movie was produced, language of the movie Plot of the movie and the actors in the movie.
+The user can start the app by choosing one of the three main options, which are: concert-this, movie-this, spotify-this song.  Concert-this will display the name of the venue, the venue location and time and date of the event.  
+
+Movie-this will display the Title of the movie, year the movie came out, the IMDB Rating of the movie, the  country where the movie was produced, language of the movie, Plot of the movie and the actors in the movie. 
+
+The spotify-this-song option, once the user inputs the name of a song, it will display the artist who plays the song the song's name, a preview link of the song from spotify and the name of the album.
  
  This app also has certain defaults if the user does not input a value.  For the movie option it will display the movie Mr. Nobody.  And if the user does not input a song for the spotify-this-song option the song The Sign will display.  Furthermore the app has a do-what-it-says option.  This will populate the info in the .env file.
 
