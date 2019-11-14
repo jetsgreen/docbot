@@ -51,13 +51,14 @@ function concertThis(userInput) {
 function movieThis() {
     if (!userInput) {
         userInput === "Mr. Nobody";
+        console.log("Mr. Nobody");
     };
     var movieQueryUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy"
     axios.get(movieQueryUrl).then(
         function (response) {
             // for (var i = 0; i < response.data.length; i++) {
             console.log("========================================================================================")
-            console.log("The " + userInput + " came out in the year: " + response.data.Year);
+            console.log("This movie came out in the year: " + response.data.Year);
             console.log("Imdb Rating: " + response.data.imdbRating);
             console.log("The plot of the movie: " + response.data.Plot);
             console.log("Actors: " + response.data.Actors);
