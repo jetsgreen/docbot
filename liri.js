@@ -39,7 +39,9 @@ function concertThis(userInput) {
             console.log(userInput)
             for (var i = 0; i < response.data.length; i++) {
                 console.log("========================================================================================");
-                console.log("This artist will be performing at " + response.data[i].venue.name + " on this date " + response.data[i].datetime);
+                console.log("This artist will be performing at " + response.data[i].venue.name);
+                console.log("They will be performing on this date: " + response.data[i].datetime);
+                console.log(response.data[i].venue.city);
 
             }
         });
