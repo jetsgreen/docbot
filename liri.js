@@ -9,12 +9,12 @@ var moment = require("moment");
 moment().format();
 
 var axios = require("axios");
-var userOption = process.argv[2];
 var userInput = process.argv[3];
+var userOption = process.argv[2];
 
-switch (userInput) {
+switch (userOption) {
     case "concert-this":
-        concertThis(userOption);
+        concertThis(userInput);
         break;
     case "movie-this":
         movieThis(userOption);
@@ -27,24 +27,28 @@ switch (userInput) {
         break;
 
 };
-// function concertThis() {
-     
-axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp").then(
-    function (response) {
-        for (var i = 0; i < response.data.length; i++) {
-            console.log("========================================================================================");
-            console.log("This artist will be performing at " + response.data[i].venue.name + " on this date " + response.data[i].datetime);
+function concertThis(userInput) {
 
-        }
-    }
-);
-// };
+    
+
+    axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp").then(
+      
+        function (response) {
+            console.log(response.data);
+            console.log(userInput)
+            for (var i = 0; i < response.data.length; i++) {
+                console.log("========================================================================================");
+                console.log("This artist will be performing at " + response.data[i].venue.name + " on this date " + response.data[i].datetime);
+               
+            }
+        });
+};
 
 
-// function movieThis(userInput){
-    // if(!userInput) {
-    //     userInput === "Mr. Nobody";
-    // };
+function movieThis(){
+    if(!userInput) {
+        userInput === "Mr. Nobody";
+    };
     var movieQueryUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy"
 axios.get(movieQueryUrl).then(
     function (response) {
@@ -56,28 +60,29 @@ axios.get(movieQueryUrl).then(
             console.log("Actors: " + response.data.Actors);
             console.log("Language: " + response.data.Language);
             console.log("This movie was produced in: " + response.data.Country);
-        }
+        // }
 
-    // }
-);
+    
+    });
 
-// };
-// function doThis(userOption) {
-// var fs = require("fs");
+    };
 
-// fs.readFile("random.txt", "utf8", function(error, data) {
+function doThis() {
+var fs = require("fs");
 
- 
-//   if (error) {
-//     return console.log(error);
-//   }
+fs.readFile("random.txt", "utf8", function(error, data) {
 
-//   var dataArr = data.split(",");
-  
-// //   spotifySong(dataArr[0], dataArr[1]);
-//   console.log(dataArr);
-// });
-// };
+
+  if (error) {
+    return console.log(error);
+  }
+
+  var dataArr = data.split(",");
+
+//   spotifySong(dataArr[0], dataArr[1]);
+  console.log(dataArr);
+});
+};
 
 
 
