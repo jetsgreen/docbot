@@ -1,14 +1,14 @@
 # docbot
 
-1 Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
+#Introduction to my Liri app:
 
 -LIRI is a command line node app, and is a Language Interpretation and Recognition Interface.This application takes in the user's input under different parameters.  These parameters include searches for movies, concerts, and songs.  It also has certain defaults if the user does not make a choice.
 
-2 Give a high-level overview of how the app is organized
+#Application Set-up:
 
 -I started this project by creating and cloning a repository. Then I installed a number of  packages through the npm command.  These packages include Node-Spotify-API, Axios, Moment and DotEnv. Then I proceeded to the root of my file and I did and npm init -y to ceate a package.json for the project.  The package.json file is required for installing third party npm packages and saving their version numbers. After that I proceeded to created the liri.js and keys.js files.  The liri.js is the main javascript file, and the keys.js has the spotify api.  I called on the keys.js file from liri.js by doing require, then the file location. I also created a ramdom.txt and .env files.  The random.txt file contains the title of the song "I wanted that way", and the .env contains the ID and the Secret key and obtained from the spotify page.  
 
-3 Give start-to-finish instructions on how to run the app
+#Instruction on how to run the application:
 
 -The user can start the app by choosing one of the three main options, which are: concert-this, movie-this, spotify-this song.  Concert-this will display the name of the venue, the venue location and time and date of the event.  
 
