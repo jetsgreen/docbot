@@ -74,7 +74,7 @@ function spotifySong() {
 
     if (!userInput) {
         userInput === "The Sign";
-        console.log(userInput);
+        console.log("The Sign");
     };
     spotify.search({ type: "track", query: userInput }).then(function (response) {
         for (var i = 0; i < 1; i++) {
